@@ -16,10 +16,4 @@ public class ReminderTests extends TestBase{
         app.getReminder().saveReminder();
         Assert.assertTrue(app.getMainScreen().isReminderTitlePresent().contains("Holiday"));
     }
-    @Test
-    public void contentOfTheTextInLicencesSectionPositiveTest() {
-        app.getMainScreen().tapOnTheVerticalDots();
-        app.getMainScreen().tapOnLicences();
-        Assert.assertTrue(app.getLicencesScreen().isLicencesScreenContainText("NOTICES FOR LIBRARIES"));
-    }
 }

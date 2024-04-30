@@ -3,6 +3,8 @@ package com.remindly.fw;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.util.Collection;
+
 public class MainScreenHelper extends BaseHelper{
     public MainScreenHelper(AppiumDriver driver) {
         super(driver);
@@ -24,5 +26,17 @@ public class MainScreenHelper extends BaseHelper{
     }
     public void tapOnLicences() {
         tap(By.id("title"));
+    }
+    public String isReminderDatePresent() {
+        return driver.findElement(By.id("recycle_date_time")).getText();
+    }
+    public String isReminderRepeatOffPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText();
+    }
+    public String isReminderEveryTwoHoursPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText();
+    }
+    public String isReminderTypeOfRepetitionsMinutesPresent() {
+        return driver.findElement(By.id("recycle_repeat_info")).getText();
     }
 }
